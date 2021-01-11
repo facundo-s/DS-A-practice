@@ -10,13 +10,18 @@ class Solution(object):
         #second half is 2*i
         
         #there's a better data way than this
-        shuffled = [None]*2*n
-        for i in range(2*n):
-            if i<n:
-                shuffled[2*i]=nums[i]
-            else:
-                shuffled[2*(i-n)+1]=nums[i]
+#         shuffled = [None]*2*n
+#         for i in range(2*n):
+#             if i<n:
+#                 shuffled[2*i]=nums[i]
+#             else:
+#                 shuffled[2*(i-n)+1]=nums[i]
                 
+#         return shuffled
+        shuffled = [None]*2*n
+        for i in range(n):
+            shuffled[2*i]=nums[i]
+            shuffled[2*i+1]=nums[n+i]
         return shuffled
         
         
